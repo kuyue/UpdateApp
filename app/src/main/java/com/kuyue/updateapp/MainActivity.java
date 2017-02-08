@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, UpdateService.class);
-//                intent.putExtra("apkUrl", );//要更新包的地址
-//                startService(intent);
-                ToastUtils.getInstance().show("已经是最新版！");
+                Intent intent = new Intent(MainActivity.this, UpdateService.class);
+                intent.putExtra("apkUrl", "https://github.com/kuyue/UpdateApp/blob/master/app/app-release_1.1.apk");//要更新包的地址
+                startService(intent);
+//                ToastUtils.getInstance().show("已经是最新版！");
             }
         });
     }
